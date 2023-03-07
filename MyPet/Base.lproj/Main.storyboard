@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lg5-VW-AC9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="WfL-I6-3Ec">
+                                <rect key="frame" x="50" y="286" width="293" height="382"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-pT-XnA">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="100"/>
+                                        <color key="backgroundColor" red="0.96998662298181826" green="0.94398194724007545" blue="0.59850559126124103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="jJt-HF-aCi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="댕">
+                                            <color key="titleColor" red="0.45317723059999998" green="0.4641652704" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goPetVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7y-wH-B3l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3J-78-3D8">
+                                        <rect key="frame" x="0.0" y="141" width="293" height="100"/>
+                                        <color key="backgroundColor" red="0.96998662300000005" green="0.94398194719999995" blue="0.59850559130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Yqr-ZQ-a4s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="냥">
+                                            <color key="titleColor" red="0.45317723059999998" green="0.4641652704" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goPetVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Gt-cm-t91"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkf-VD-Cpq">
+                                        <rect key="frame" x="0.0" y="282" width="293" height="100"/>
+                                        <color key="backgroundColor" red="0.96998662300000005" green="0.94398194719999995" blue="0.59850559130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="lhb-68-sBe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="짹">
+                                            <color key="titleColor" red="0.45317723059999998" green="0.4641652704" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goPetVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0O-y9-3lK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WfL-I6-3Ec" secondAttribute="trailing" constant="50" id="Sfe-vd-dU7"/>
+                            <constraint firstItem="WfL-I6-3Ec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="qZP-Fq-3lV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WfL-I6-3Ec" secondAttribute="bottom" constant="150" id="xCv-6E-tna"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XS0-Nq-TqB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dwf-w7-nHr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lg5-VW-AC9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J0G-Kz-WeD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B75-99-Kz7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZq-tP-kRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-27.464788732394368"/>
+        </scene>
+        <!--Pet View Controller-->
+        <scene sceneID="hZN-oJ-Ar0">
+            <objects>
+                <viewController storyboardIdentifier="PetViewController" id="PhI-az-CW1" customClass="PetViewController" customModule="MyPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4FR-km-230">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="7K3-3M-Zzi">
+                                <rect key="frame" x="20" y="598" width="353" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-Zv-hQV">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="70"/>
+                                        <color key="backgroundColor" red="0.64566836599999999" green="0.80995315310000005" blue="0.55707010690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="밥주기 🥣">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedFoodBtn:" destination="PhI-az-CW1" eventType="touchUpInside" id="lKV-db-Uo6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="531-ia-bKg">
+                                        <rect key="frame" x="193" y="0.0" width="160" height="70"/>
+                                        <color key="backgroundColor" red="0.64566836599999999" green="0.80995315310000005" blue="0.55707010690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="놀아주기 ⚾️">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedPlayBtn:" destination="PhI-az-CW1" eventType="touchUpInside" id="KDv-As-ZAL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="BOO-Me-JbA"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="jmi-CL-Nzv">
+                                <rect key="frame" x="20" y="683" width="353" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-rh-299">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="70"/>
+                                        <color key="backgroundColor" red="0.64566836599999999" green="0.80995315310000005" blue="0.55707010690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="씻기 💦">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedShowerBtn:" destination="PhI-az-CW1" eventType="touchUpInside" id="oDQ-Fz-lhR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnn-XC-WNy">
+                                        <rect key="frame" x="193" y="0.0" width="160" height="70"/>
+                                        <color key="backgroundColor" red="0.64566836599999999" green="0.80995315310000005" blue="0.55707010690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8wg-fK-MRO"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPp-zL-wcj">
+                                <rect key="frame" x="76" y="307" width="240" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6K-zt-thg">
+                                <rect key="frame" x="146.66666666666666" y="109" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UB2-or-QW9"/>
+                                    <constraint firstAttribute="width" constant="100" id="fsT-FP-VJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P3c-f5-t7F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P3c-f5-t7F" firstAttribute="bottom" secondItem="7K3-3M-Zzi" secondAttribute="bottom" constant="150" id="Eei-nH-UWZ"/>
+                            <constraint firstItem="7K3-3M-Zzi" firstAttribute="leading" secondItem="P3c-f5-t7F" secondAttribute="leading" constant="20" id="SUS-3Q-zpW"/>
+                            <constraint firstItem="w6K-zt-thg" firstAttribute="centerX" secondItem="4FR-km-230" secondAttribute="centerX" id="SnK-mA-Tmo"/>
+                            <constraint firstItem="P3c-f5-t7F" firstAttribute="bottom" secondItem="7K3-3M-Zzi" secondAttribute="bottom" constant="150" id="Uxn-Q2-NlI"/>
+                            <constraint firstItem="w6K-zt-thg" firstAttribute="top" secondItem="P3c-f5-t7F" secondAttribute="top" constant="50" id="VqU-Sv-Vdo"/>
+                            <constraint firstItem="P3c-f5-t7F" firstAttribute="trailing" secondItem="jmi-CL-Nzv" secondAttribute="trailing" constant="20" id="afr-Ay-cQa"/>
+                            <constraint firstItem="jmi-CL-Nzv" firstAttribute="leading" secondItem="P3c-f5-t7F" secondAttribute="leading" constant="20" id="il0-fx-Kpr"/>
+                            <constraint firstItem="jmi-CL-Nzv" firstAttribute="top" secondItem="7K3-3M-Zzi" secondAttribute="bottom" constant="15" id="jAB-fC-av4"/>
+                            <constraint firstItem="P3c-f5-t7F" firstAttribute="trailing" secondItem="7K3-3M-Zzi" secondAttribute="trailing" constant="20" id="u5a-Be-MAk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="petImage" destination="fPp-zL-wcj" id="ewt-z6-Ef8"/>
+                        <outlet property="petName" destination="w6K-zt-thg" id="IRC-3Q-xTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTL-jh-xmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736.6412213740457" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
