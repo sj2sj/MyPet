@@ -43,7 +43,7 @@ class PetViewController: UIViewController {
     
     petImage.image = UIImage(named: myPet.viewImage(Pet.Behavior.play))
     
-    //3. 러브올려줘야해요.
+    //3. 러브올려야함
     myPet.plusLove()
   }
   
