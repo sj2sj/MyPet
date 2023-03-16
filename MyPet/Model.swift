@@ -20,28 +20,25 @@ class Pet {
   //status 최대치
   final let maxGauge: Int = 100
   
-  //포만감, 즐거움, 청결, 애정
-  var satiety, pleasure, cleanliness, love: Int
+  //수정 전 코드
+  //var satiety, pleasure, cleanliness,
+  var love: Int
   
-  //love가 랜덤으로 오름
-  final func plusLove() {
-    self.love += Int.random(in: 1...5)
-    print("love: \(self.love)")
-  }
+  //수정 후 코드 - status 딕셔너리로 변경
+  //포만감, 즐거움, 청결함
+  var status = ["satiety": 50, "pleasure": 50, "cleanliness": 50]
+  
   
   // 생성자
-  init(name: String, age: Int, satiety: Int, pleasure: Int, cleanliness: Int, love: Int) {
+  init(name: String, age: Int, love: Int) {
     self.name = name
     self.age = age
-    self.satiety = satiety
-    self.pleasure = pleasure
-    self.cleanliness = cleanliness
     self.love = love
   }
   
   // 편의 -> 지정
   convenience init() {
-    self.init(name: "", age: 1, satiety: 50, pleasure: 50, cleanliness: 50, love: 0)
+    self.init(name: "", age: 1, love: 0)
   }
   
 }
@@ -49,9 +46,9 @@ class Pet {
 
 
 //고양이
-class Cat: Pet {
+final class Cat: Pet {
   init() {
-    super.init(name: "고양이", age: 1, satiety: 50, pleasure: 50, cleanliness: 50, love: 0)
+    super.init(name: "고양이", age: 1, love: 0)
     petImgDic = [Behavior.basic : "cat.png"
                  , Behavior.food : "cat_food.png"
                  , Behavior.shower : "cat_shower.png"
@@ -61,9 +58,9 @@ class Cat: Pet {
 
 
 //강아지
-class Dog: Pet {
+final class Dog: Pet {
   init() {
-    super.init(name: "강아지", age: 1, satiety: 50, pleasure: 50, cleanliness: 50, love: 0)
+    super.init(name: "강아지", age: 1, love: 0)
     petImgDic = [Behavior.basic : "dog.png"
                  , Behavior.food : "dog_food.png"
                  , Behavior.shower : "dog_shower.png"
@@ -73,9 +70,9 @@ class Dog: Pet {
 
 
 //새
-class Bird: Pet {
+final class Bird: Pet {
   init() {
-    super.init(name: "새", age: 1, satiety: 50, pleasure: 50, cleanliness: 50, love: 0)
+    super.init(name: "새", age: 1, love: 0)
     petImgDic = [Behavior.basic : "bird.png"
                  , Behavior.food : "bird_food.png"
                  , Behavior.shower : "bird.png"]
@@ -100,5 +97,28 @@ extension Pet {
     
     return imageName
   }
+  
+  //love가 5~10까지 랜덤으로 오름
+  func plusLove() {
+    // love가 100이상 넘지 못하도록
+    self.love += Int.random(in: 5...10)
+    if (self.love > maxGauge) {
+      self.love = maxGauge
+    }
+
+    print("love: \(self.love)")
+  }
+}
+
+
+extension Bird: Flyable {
+  func fly() {
+    print("\(self.name)가 날아다녀요.")
+  }
+}
+
+
+protocol Flyable {
+  func fly()
 }
 

@@ -13,6 +13,8 @@ class PetViewController: UIViewController {
   
   @IBOutlet weak var petImage: UIImageView!
   @IBOutlet weak var petName: UILabel!
+  @IBOutlet weak var petLoveStatus: UILabel!
+  @IBOutlet weak var specialBtn: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,43 +24,76 @@ class PetViewController: UIViewController {
     petImage.image = UIImage(named: myPet.viewImage(Pet.Behavior.basic))
     
     petName.text = myPet.name
+    
+    specialBtn.layer.cornerRadius = specialBtn.layer.frame.size.width / 2
   }
 
   
   //밥주기 버튼 클릭
   @IBAction func tappedFoodBtn(_ sender: UIButton) {
-    //1. 밥게이지 올려줘야 해요
-    
+    //1. satiety 올려줌
+    guard var satiety = myPet.status["satiety"] else { return }
+    satiety += Int.random(in: 5...10)
+    myPet.status["satiety"] = satiety
 
     //2. 밥먹는이미지 출력해줘야해요
     petImage.image = UIImage(named: myPet.viewImage(Pet.Behavior.food))
     
-    //3. 러브올려줘야해요
-    myPet.plusLove()
+   
   }
   
   
   //놀아주기 버튼 클릭
   @IBAction func tappedPlayBtn(_ sender: UIButton) {
+    //pleasure
+    guard var pleasure = myPet.status["pleasure"] else { return }
+    pleasure += Int.random(in: 5...10)
+    myPet.status["pleasure"] = pleasure
     
     petImage.image = UIImage(named: myPet.viewImage(Pet.Behavior.play))
-    
-    //3. 러브올려야함
-    myPet.plusLove()
+
   }
   
   
   
   //씻기 버튼 클릭
   @IBAction func tappedShowerBtn(_ sender: UIButton) {
+    //cleanliness
+    guard var cleanliness = myPet.status["cleanliness"] else { return }
+    cleanliness += Int.random(in: 5...10)
+    myPet.status["cleanliness"] = cleanliness
     
     petImage.image = UIImage(named: myPet.viewImage(Pet.Behavior.shower))
     
-    //3. 러브올려줘야해요
-    myPet.plusLove()
   }
   
+  
+  // 밥주기, 놀아주기, 씻기 버튼 클릭 시 공통
+  @IBAction func tappedBehaviorBtn(_ sender: UIButton) {
+    //각 버튼 클릭 시 +love
+    myPet.plusLove()
+    petLoveStatus.text = String(myPet.love)
+  }
+  
+  
+  // 상태보기 버튼
+  @IBAction func tappedStatusBtn(_ sender: UIButton) {
+    let statusSum = myPet.status.values.reduce(0) { $0 + $1 }
+    print(myPet.status)
+    print("status 총합: \(statusSum)")
+  }
+  
+  
+  // 특수행동 버튼
+  @IBAction func tappedSpecialBtn(_ sender: UIButton) {
 
+    if (myPet is Flyable) {
+      (myPet as! Bird).fly()
+    } else {
+      print("특수행동 없음")
+    }
+  }
+  
 }
 
 
